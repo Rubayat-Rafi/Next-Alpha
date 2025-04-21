@@ -5,10 +5,10 @@ const SplashScreen = () => {
     <div style={styles.container} className="splash-screen">
       <div className="logo-wrapper">
         <Image
-          src="/logo Main.png" // Ensure this path is correct
+          src="/logo Main.png" 
           alt="Alpha Video Editing Logo"
-          width={200}
-          height={200}
+          width={150}
+          height={150}
           priority
         />
       </div>
