@@ -5,10 +5,11 @@ const SplashScreen = () => {
     <div style={styles.container} className="splash-screen">
       <div className="logo-wrapper">
         <Image
-          src="/logo Main.png" 
+          src="/logo Main.png"
           alt="Alpha Video Editing Logo"
           width={150}
           height={150}
+          className="w-[80px] md:w-[120px] lg:w-[150px]"
           priority
         />
       </div>
