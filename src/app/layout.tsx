@@ -7,6 +7,7 @@ import Navbar from "@/components/Navbar";
 import { Sora, Instrument_Serif } from 'next/font/google';
 import "./globals.css";
 import Footer from "@/components/Footer";
+import CustomCursor from "@/components/CustomCursor";
 
 const soraSans = Sora({
   variable: "--font-Sora",
@@ -43,6 +44,7 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
       <body
         className={`${soraSans.variable} ${instrument.variable} antialiased`}
       >
+        <CustomCursor/>
         {isLoading && isHome ? <SplashScreen />
           :
           <>

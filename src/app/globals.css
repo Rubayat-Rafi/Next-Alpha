@@ -61,6 +61,13 @@
   }
 }
 
+/* Optional: Different cursor states */
+[data-cursor="hover"] {
+  transform: scale(1.5);
+  background: white !important;
+}
+
+
 body, html {
   margin: 0;
   padding: 0;
