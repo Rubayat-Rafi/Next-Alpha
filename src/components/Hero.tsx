@@ -65,11 +65,10 @@ const Hero = () => {
                 {/* Buttons */}
                 <div className="mt-8 flex items-center space-x-6">
                     <Link
-                        target="_blank"
-                        href="https://tidycal.com/alphavideoedit2001/15-minute-meeting"
+                        href="/fiverr"
                         className="bg-MainColor text-TextColor px-4 py-2 md:px-6 md:py-3 rounded-lg outline-3 hover:outline-offset-4 outline-[#fcfcfa]/5 font-semibold hover:outline-mainColor transition-all text-sm md:text-base"
                     >
-                        Book a call
+                        Fiverr
                     </Link>
                     <Link href="/about" className="bg-[#fcfcfa]/5 outline-3 hover:outline-offset-4 text-TextColor px-4 py-2 md:px-6 md:py-3 rounded-lg font-semibold outline-[#fcfcfa]/5 hover:outline-mainColor transition-all text-sm md:text-base">
                         Learn More

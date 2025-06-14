@@ -1,12 +1,12 @@
-"use client"
-import React, { useState } from 'react';
-import Loading from './Loading';
+import React from 'react';
 
 const OurClients = () => {
-    const [videoLoading, setVideoLoading] = useState({
-        video1: true,
-        video2: true
-    });
+
+    const shorts = [
+        { id: "CxlpHtjCVFw" },
+        { id: "I8pRGI89znU" },
+    ];
+
 
     return (
         <div id="results" className="max-w-[1440px] mx-auto w-11/12">
@@ -31,38 +31,17 @@ const OurClients = () => {
                     </div>
                 </div>
                 {/* Video Grid - Updated for YouTube Shorts aspect ratio */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 lg:gap-8 mt-10 md:px-[10%] lg:px-[15%]">
-                    {/* Video 1 */}
-                    <div className="relative" style={{ paddingBottom: '177.78%' }}> {/* 9:16 aspect ratio container */}
-                    {videoLoading.video1 && (
-                            <Loading style="absolute top-0 left-0 w-full h-full rounded-2xl" />
-                        )}
-                        <iframe
-                            className={`absolute top-0 left-0 w-full h-full rounded-2xl ${videoLoading.video1 ? 'opacity-0' : 'opacity-100'}`}
-                            src="https://www.youtube.com/embed/CxlpHtjCVFw?rel=0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                            frameBorder="0"
-                            onLoad={() => setVideoLoading(prev => ({ ...prev, video1: false }))}
-                            onError={() => setVideoLoading(prev => ({ ...prev, video1: false }))}
-                        ></iframe>
-                    </div>
-                    
-                    {/* Video 2 */}
-                    <div className="relative" style={{ paddingBottom: '177.78%' }}> {/* 9:16 aspect ratio container */}
-                    {videoLoading.video1 && (
-                            <Loading style="absolute top-0 left-0 w-full h-full rounded-2xl" />
-                        )}
-                        <iframe
-                           className={`absolute top-0 left-0 w-full h-full rounded-2xl ${videoLoading.video1 ? 'opacity-0' : 'opacity-100'}`}
-                            src="https://www.youtube.com/embed/I8pRGI89znU?rel=0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                            frameBorder="0"
-                            onLoad={() => setVideoLoading(prev => ({ ...prev, video2: false }))}
-                            onError={() => setVideoLoading(prev => ({ ...prev, video2: false }))}
-                        ></iframe>
-                    </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-6 lg:gap-8 mt-10 px-4 md:px-[10%] lg:px-[20%]">
+                    {shorts.map((short) => (
+                        <div key={short.id} className="relative w-full pt-[177.77%] overflow-hidden rounded-xl shadow-md">
+                            <iframe
+                                src={`https://www.youtube.com/embed/${short.id}?controls=0`}
+                                className="absolute top-0 left-0 w-full h-full rounded-xl"
+                                frameBorder="0"
+                                allowFullScreen
+                            />
+                        </div>
+                    ))}
                 </div>
 
 

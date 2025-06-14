@@ -16,7 +16,7 @@
   --font-instrument: "Instrument Serif", serif;
 }
 
-@layer utilities{
+@layer components {
   .bg-BgColor {
     background-color: var(--bg-color);
   }
@@ -67,8 +67,8 @@
   background: white !important;
 }
 
-
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -81,16 +81,14 @@ body {
   background-color: #0a0416;
   color: #fcfcfa;
   font-family: "Sora", sans-serif;
-}     
-
-/* Fade-out animation for the entire splash screen */
-.splash-screen {
-  animation: fadeOut 2.5s ease-in-out forwards; /* Match the 2.5s duration from layout.tsx */
 }
 
-/* Upward slide animation for the logo */
+.splash-screen {
+  animation: fadeOut 2.5s ease-in-out forwards; 
+}
+
 .logo-wrapper {
-  animation: slideUp 1.2s ease-out forwards; /* 1.2s for smooth upward motion */
+  animation: slideUp 1.2s ease-out forwards; 
 }
 
 /* Fade-out keyframes */
@@ -109,11 +107,15 @@ body {
 /* Slide-up keyframes */
 @keyframes slideUp {
   0% {
-    transform: translateY(100vh); /* Start below the viewport */
+    transform: translateY(100vh); 
     opacity: 0;
   }
   100% {
-    transform: translateY(0); /* End at the center */
+    transform: translateY(0); 
     opacity: 1;
   }
+}
+
+@view-transition {
+ navigation: auto;
 }
