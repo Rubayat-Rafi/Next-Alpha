@@ -33,17 +33,20 @@ const OurClients = () => {
                 {/* Video Grid - Updated for YouTube Shorts aspect ratio */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-6 lg:gap-8 mt-10 px-4 md:px-[10%] lg:px-[20%]">
                     {shorts.map((short) => (
-                        <div key={short.id} className="relative w-full pt-[177.77%] overflow-hidden rounded-xl shadow-md">
+                        <div
+                            key={short.id}
+                            className="relative w-full overflow-hidden border-2 border-[#765eff]/30 rounded-xl aspect-[9/16]"
+                        >
                             <iframe
                                 src={`https://www.youtube.com/embed/${short.id}?controls=0`}
-                                className="absolute top-0 left-0 w-full h-full rounded-xl"
-                                frameBorder="0"
+                                title="YouTube video"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowFullScreen
+                                className="absolute top-0 left-0 w-full h-full rounded-xl"
                             />
                         </div>
                     ))}
                 </div>
-
 
             </div>
         </div>

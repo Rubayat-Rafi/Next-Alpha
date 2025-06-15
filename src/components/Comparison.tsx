@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { GoCheck } from 'react-icons/go';
 import { RxCross2 } from 'react-icons/rx';
 import Title from './Title';

@@ -1,7 +1,8 @@
+import { YouTubeEmbed } from "@next/third-parties/google";
 
 const Intro = () => {
     return (
-        <div className="bg-[#765eff]/5">
+        <section className="bg-[#765eff]/5">
             <div className=" py-16 lg:py-28 max-w-[1440px] mx-auto w-11/12">
                 <div className="lg:px-[20%]">
                     {/* Main Heading */}
@@ -20,19 +21,29 @@ const Intro = () => {
                     </p>
                 </div>
                 {/* Intro Video - Responsive */}
-                <div className="mt-10 px-4 flex justify-center">
-                    <div className="relative w-full max-w-4xl pt-[56%] lg:pt-[50%] xl:pt-[36%] rounded-xl overflow-hidden shadow-md">
-                        <iframe
-                            src="https://www.youtube.com/embed/M43od-A17No?controls=0"
-                            className="absolute top-0 left-0 w-full h-full rounded-xl"
-                            frameBorder="0"
-                            allowFullScreen
-                        />
+                <div>
+                    <div className="mt-10 flex justify-center">
+                        <div className="max-h-[400px] w-full max-w-[700px] rounded-2xl overflow-hidden border border-[#fcfcfa]/20">
+                            <YouTubeEmbed
+                                videoid='M43od-A17No'
+                                params="controls=0"
+                                style="height: 100%; width: 100%;"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 
 export default Intro;
+
+{/* <div className="relative w-full max-w-4xl pt-[56%] lg:pt-[50%] xl:pt-[36%] rounded-xl overflow-hidden shadow-md">
+    <iframe
+        src="https://www.youtube.com/embed/M43od-A17No?controls=0"
+        className="absolute top-0 left-0 w-full h-full rounded-xl"
+        frameBorder="0"
+        allowFullScreen
+    />
+</div> */}

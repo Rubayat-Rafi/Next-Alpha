@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
 import client1 from "../../public/ClientImage/client1.webp";
 import client2 from "../../public/ClientImage/client2.webp";
 import client3 from "../../public/ClientImage/client3.webp";
